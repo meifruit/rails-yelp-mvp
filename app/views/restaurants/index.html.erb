@@ -1,0 +1,17 @@
+<h1>Restaurants</h1>
+<%= link_to '+', new_restaurant_path %>
+<div id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card-product">
+     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= restaurant.name %></h2>
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.category%></p>
+      </div>
+    </div>
+    <p>
+      <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+    </p>
+  <% end %>
+</div>
